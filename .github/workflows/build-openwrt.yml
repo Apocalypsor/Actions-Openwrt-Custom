@@ -34,6 +34,7 @@ jobs:
         mv OpenClash/luci-app-openclash package/luci-app-openclash
         git clone https://github.com/Lienol/openwrt-package.git
         mv openwrt-package/lienol/smartdns-install package/smartdns-install
+        git clone https://github.com/Mrbai98/luci-theme-atmaterial.git package/luci-theme-atmaterial
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
