@@ -69,7 +69,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        [ -e lean_lienol.config ] && mv lean&lienol.config openwrt/.config
+        [ -e lean_lienol.config ] && mv lean_lienol.config openwrt/.config
         chmod +x diy.sh
         cd openwrt
         ../diy.sh
