@@ -1,4 +1,4 @@
-name: Build-OpenWrt
+name: Build-OpenWrt-Lean&Lienol
 
 on:
   push:
@@ -69,7 +69,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
-        [ -e .config ] && mv .config openwrt
+        [ -e lean&lienol.config ] && mv lean&lienol.config openwrt/.config
         chmod +x diy.sh
         cd openwrt
         ../diy.sh
