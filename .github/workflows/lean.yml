@@ -2,12 +2,12 @@ name: Build-OpenWrt-Lean
 
 on:
   push:
-    branches:
+    branches: 
       - master
-   schedule:
-     - cron: 0 8 * * 4
-   watch:
-     types: [started]
+  schedule:
+    - cron: 0 8 * * 4
+  watch:
+    types: [started]
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
