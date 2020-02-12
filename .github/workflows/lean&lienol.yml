@@ -1,13 +1,9 @@
 name: Build-OpenWrt-Lean&Lienol
 
 on:
-  release:
-    types: [published]
   push:
     branches:
       - master
-    paths:
-      - '.config'
    schedule:
      - cron: 0 8 * * 4
    watch:
