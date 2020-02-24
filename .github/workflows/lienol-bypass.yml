@@ -55,14 +55,11 @@ jobs:
     - name: Clone other packages
       run: |
         git clone https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
-        git clone https://github.com/Mrbai98/luci-theme-atmaterial.git openwrt/package/luci-theme-atmaterial
+        git clone https://github.com/rosywrt/luci-theme-rosy.git && mv luci-theme-rosy/luci-theme-rosy openwrt/package/luci-theme-rosy
         git clone https://github.com/frainzy1477/luci-app-clash.git openwrt/package/luci-app-clash
-        git clone https://github.com/pymumu/smartdns.git openwrt/package/smartdns
-        git clone https://github.com/Apocalypsor/luci-app-smartdns.git openwrt/package/luci-app-smartdns
 
     - name: Update feeds
-      run: |
-        cd openwrt && ./scripts/feeds clean && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds clean && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
