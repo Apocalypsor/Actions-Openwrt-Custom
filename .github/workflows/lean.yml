@@ -112,8 +112,8 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.REPO_TOKEN }}
-        file: ${{ env.FIRMWARE }}
-        tag: ${{ github.ref }}
+        file: ${{ env.FIRMWARE }}/*
+        tag: Lean
         asset_name: Lean
         overwrite: true
         file_glob: true
