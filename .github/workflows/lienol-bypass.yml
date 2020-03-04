@@ -24,10 +24,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
 
-    strategy:
-      matrix:
-        artifact_name: [*.gz, *.img]
-
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -117,7 +113,7 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.REPO_TOKEN }}
-        file: ${{ env.FIRMWARE }}/${{ matrix.artifact_name }}
+        file: ${{ env.FIRMWARE }}/*.gz
         tag: Lienol-Bypass
         asset_name: Lienol Bypass
         overwrite: true
