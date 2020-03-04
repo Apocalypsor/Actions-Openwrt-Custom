@@ -23,6 +23,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+
+    strategy:
+      matrix:
+        artifact_name: [*.gz, *.img]
     
     steps:
     - name: Checkout
@@ -112,7 +116,7 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.REPO_TOKEN }}
-        file: ${{ env.FIRMWARE }}/*
+        file: ${{ env.FIRMWARE }}/${{ matrix.artifact_name }}
         tag: Lean
         asset_name: Lean
         overwrite: true
