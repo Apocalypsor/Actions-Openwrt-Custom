@@ -116,5 +116,5 @@ jobs:
         file: ${{ env.FIRMWARE }}/*gz
         tag: Lienol-Bypass
         asset_name: Lienol Bypass
-        overwrite: false
+        overwrite: true
         file_glob: true 

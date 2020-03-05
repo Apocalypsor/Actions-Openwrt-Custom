@@ -116,5 +116,5 @@ jobs:
         file: ${{ env.FIRMWARE }}/*img
         tag: Lean
         asset_name: Lean
-        overwrite: false
+        overwrite: true
         file_glob: true
