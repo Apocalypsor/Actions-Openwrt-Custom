@@ -49,6 +49,7 @@ jobs:
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git openwrt/package/luci-app-adguardhome && echo "#https://cdn.jsdelivr.net/gh/AdguardTeam/AdGuardHome/AdGuardHome_linux_${Arch}.tar.gz" > openwrt/package/luci-app-adguardhome/root/usr/share/AdGuardHome/links.txt
         git clone https://github.com/pymumu/smartdns.git openwrt/package/smartdns
         git clone https://github.com/Apocalypsor/luci-app-smartdns.git openwrt/package/luci-app-smartdns
+        
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -112,7 +113,7 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.REPO_TOKEN }}
-        file: ${{ env.FIRMWARE }}/*.img
+        file: ${{ env.FIRMWARE }}/*
         tag: Lean
         asset_name: Lean
         overwrite: true

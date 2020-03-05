@@ -113,7 +113,7 @@ jobs:
       uses: svenstaro/upload-release-action@v1-release
       with:
         repo_token: ${{ secrets.REPO_TOKEN }}
-        file: ${{ env.FIRMWARE }}/*.gz
+        file: ${{ env.FIRMWARE }}/*
         tag: Lienol-Bypass
         asset_name: Lienol Bypass
         overwrite: true
