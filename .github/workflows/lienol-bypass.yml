@@ -52,7 +52,7 @@ jobs:
         git clone https://github.com/Apocalypsor/luci-app-smartdns.git openwrt/package/luci-app-smartdns
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds clean && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
