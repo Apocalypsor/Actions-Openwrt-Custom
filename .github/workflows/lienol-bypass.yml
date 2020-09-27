@@ -1,13 +1,12 @@
 name: Build-OpenWrt-Lienol-Bypass
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - master
   schedule:
     - cron: 0 8 * * *
-  watch:
-    types: [started]
 
 env:
   REPO_URL: https://github.com/Lienol/openwrt
@@ -16,7 +15,6 @@ env:
   CONFIG_FILE: lienol_bypass.config
   DIY_P1_SH: feed.sh
   DIY_P2_SH: diy_bypass.sh
-  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -30,7 +28,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
 
     - name: Initialization environment
       env:
@@ -81,10 +79,6 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
-    - name: SSH connection to Actions
-      uses: P3TERX/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
-
     - name: Download package
       id: package
       run: |
@@ -110,7 +104,7 @@ jobs:
       run: df -hT
 
     - name: Upload bin directory
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@v2
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
