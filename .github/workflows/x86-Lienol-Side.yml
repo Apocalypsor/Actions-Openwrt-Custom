@@ -1,4 +1,4 @@
-name: '[x86]Lienol Bypass'
+name: '[x86]Lienol Side'
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches: 
       - master
     paths:
-      - '.github/workflows/x86-Lienol-Bypass.yml'
+      - '.github/workflows/x86-Lienol-Side.yml'
   schedule:
     - cron: 0 8 * * *
 
@@ -49,16 +49,16 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        git clone --depth 1 -b $REPO_BRANCH $REPO_URL openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Clone other packages
       run: |
-        git clone https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon.git openwrt/package/luci-theme-atmaterial-ColorIcon
-        git clone https://github.com/rosywrt/luci-theme-rosy.git && mv luci-theme-rosy/luci-theme-rosy openwrt/package/luci-theme-rosy
-        git clone -b master https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
-        git clone https://github.com/pymumu/smartdns.git openwrt/package/smartdns
-        git clone -b lede https://github.com/pymumu/luci-app-smartdns.git openwrt/package/luci-app-smartdns
+        git clone --depth 1 https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon.git openwrt/package/luci-theme-atmaterial-ColorIcon
+        git clone --depth 1 https://github.com/rosywrt/luci-theme-rosy.git && mv luci-theme-rosy/luci-theme-rosy openwrt/package/luci-theme-rosy
+        git clone --depth 1 -b master https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
+        git clone --depth 1 https://github.com/pymumu/smartdns.git openwrt/package/smartdns
+        git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns.git openwrt/package/luci-app-smartdns
 
     - name: Load custom feeds
       run: |
