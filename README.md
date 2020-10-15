@@ -1,6 +1,6 @@
 # Build Openwrt via Github Action
 
-## Lean Openwrt for K2P
+## Lean Openwrt for K2P ![[K2P]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5BK2P%5DLean/badge.svg)
 
 contains following packages:
 
@@ -10,7 +10,7 @@ contains following packages:
 + luci-app-syncdial
 + other usable packages
 
-## Lean Openwrt for x64 (optimized for main router)
+## Lean Openwrt for x64 (optimized for main router) ![[x86]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5Bx86%5DLean/badge.svg)
 
 contains following packages:
 
@@ -24,7 +24,7 @@ contains following packages:
 + luci-app-syncdial
 + other usable packages
 
-## Lienol Openwrt for x64 (optimized for side router)
+## Lienol Openwrt for x64 (optimized for side router) ![[x86]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5Bx86%5DLienol%20Side/badge.svg)
 
 contains following packages:
 
