@@ -34,3 +34,4 @@ contains following packages:
 + luci-app-frpc
 + **luci-app-openclash**
 + **luci-app-passwall**
++ other usable packages
