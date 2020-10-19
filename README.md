@@ -10,6 +10,18 @@ contains following packages:
 + luci-app-syncdial
 + other usable packages
 
+## Lienol Openwrt for N1 ![[N1]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5BN1%5DLienol%20Side/badge.svg)
+
+contains following packages:
+
++ luci-app-aria2
++ luci-app-ddns
++ luci-app-dockerman
++ luci-app-frpc
++ **luci-app-openclash**
++ **luci-app-passwall**
++ other usable packages
+
 ## Lean Openwrt for x64 (optimized for main router) ![[x86]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5Bx86%5DLean/badge.svg)
 
 contains following packages:
