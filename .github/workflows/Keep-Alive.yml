@@ -12,14 +12,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.REPO_TOKEN }}
       - name: Keep Alive
         run: date > .github/KEEP
-      - name: Commit
-        uses: autosuite/autocommit@main
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit-message: Keep Alive
-          add-options: -A
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.REPO_TOKEN }}
+          commit_message: Keep Alive
+          skip_dirty_check: false
