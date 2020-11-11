@@ -10,6 +10,16 @@ contains following packages:
 + luci-app-syncdial
 + other usable packages
 
+## Lean Openwrt for AC2100 ![[AC2100]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5BAC2100%5DLean/badge.svg)
+
+contains following packages:
+
++ luci-app-ddns
++ luci-app-frpc
++ luci-app-smartdns
++ luci-app-syncdial
++ other usable packages
+
 ## Lienol Openwrt for N1 ![[N1]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5BN1%5DLienol%20Side/badge.svg)
 
 contains following packages:
