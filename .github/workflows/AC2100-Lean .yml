@@ -1,4 +1,4 @@
-name: '[N1]Lienol Side'
+name: '[AC2100]Lean'
 
 on:
   workflow_dispatch:
@@ -6,17 +6,17 @@ on:
     branches: 
       - master
     paths:
-      - '.github/workflows/N1-Lienol-Side.yml'
+      - '.github/workflows/AC2100-Lean.yml'
   schedule:
     - cron: 0 8 * * *
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: 19.07
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: N1/lienol_bypass.config
-  DIY_P1_SH: N1/feed.sh
-  DIY_P2_SH: N1/diy_bypass.sh
+  CONFIG_FILE: AC2100/.config
+  DIY_P1_SH: AC2100/feed.sh
+  DIY_P2_SH: AC2100/diy.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
@@ -38,7 +38,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl https://raw.githubusercontent.com/Lienol/openwrt/19.07/README.md | grep -e 'sudo apt-get -y .*' | head -n1 | sed 's/sudo apt-get -y install //g')
+        sudo -E apt-get -qq install $(curl https://raw.githubusercontent.com/coolsnowwolf/lede/master/README.md | grep -e 'sudo apt-get -y .*' | head -n1 | sed 's/sudo apt-get -y install //g')
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -56,10 +56,8 @@ jobs:
       run: |
         git clone --depth 1 https://github.com/esirplayground/luci-theme-atmaterial-ColorIcon.git openwrt/package/luci-theme-atmaterial-ColorIcon
         git clone --depth 1 https://github.com/rosywrt/luci-theme-rosy.git && mv luci-theme-rosy/luci-theme-rosy openwrt/package/luci-theme-rosy
-        git clone --depth 1 -b master https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
         git clone --depth 1 https://github.com/pymumu/smartdns.git openwrt/package/smartdns
         git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns.git openwrt/package/luci-app-smartdns
-        git clone --depth 1 https://github.com/tuanqing/install-program openwrt/package/install-program
 
     - name: Load custom feeds
       run: |
