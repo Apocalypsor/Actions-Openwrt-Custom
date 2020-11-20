@@ -69,7 +69,7 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
     - name: Update feeds
-      run: cd openwrt && ./scripts/feeds update -a
+      run: cd openwrt && ./scripts/feeds update -a && rm -rf ./feeds/luci/applications/luci-app-smartdns && rm -rf ./feeds/packages/net/smartdns
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
