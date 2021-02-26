@@ -40,10 +40,10 @@ contains following packages:
 
 ## Deprecated
 
-### [Lean Openwrt for K2P](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions?query=workflow%3A%5BK2P%5DLean)
+### Lean Openwrt for K2P
 
 **Recommend**: [Padavan K2P](https://opt.cn2qq.com/padavan/)
 
-### [Lean Openwrt for AC2100](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions?query=workflow%3A%5BAC2100%5DLean)
+### Lean Openwrt for AC2100
 
 **Recommend**: [Padavan RM2100](https://opt.cn2qq.com/padavan/)
