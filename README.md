@@ -1,6 +1,6 @@
 # Build Openwrt via Github Action
 
-### [Lienol Openwrt for N1](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions?query=workflow%3A%22%5BN1%5DLienol+Side%22) ![[N1]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5BN1%5DLienol%20Side/badge.svg)
+### [Lienol Openwrt for N1](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/N1-Lienol-Side.yaml) ![[N1]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/N1-Lienol-Side.yaml/badge.svg?branch=master)
 
 contains following packages:
 
@@ -9,10 +9,9 @@ contains following packages:
 + luci-app-dockerman
 + luci-app-frpc
 + **luci-app-openclash**
-+ **luci-app-passwall**
 + other usable packages
 
-### [Lean Openwrt for x64 (optimized for main router)](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions?query=workflow%3A%5Bx86%5DLean) ![[x86]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5Bx86%5DLean/badge.svg)
+### [Lean Openwrt for x64 (optimized for main router)](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/x86-Lean.yaml) ![[x86]Lean](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/x86-Lean.yaml/badge.svg?branch=master)
 
 contains following packages:
 
@@ -24,9 +23,10 @@ contains following packages:
 + luci-app-minidlna
 + luci-app-smartdns
 + luci-app-syncdial
++ **luci-app-openclash**
 + other usable packages
 
-### [Lienol Openwrt for x64 (optimized for side router)](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions?query=workflow%3A%22%5Bx86%5DLienol+Side%22) ![[x86]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/workflows/%5Bx86%5DLienol%20Side/badge.svg)
+### [Lienol Openwrt for x64 (optimized for side router)](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/x86-Lienol-Side.yaml) ![[x86]Lienol Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/x86-Lienol-Side.yaml/badge.svg?branch=master)
 
 contains following packages:
 
@@ -35,7 +35,6 @@ contains following packages:
 + luci-app-dockerman
 + luci-app-frpc
 + **luci-app-openclash**
-+ **luci-app-passwall**
 + other usable packages
 
 ## Deprecated
