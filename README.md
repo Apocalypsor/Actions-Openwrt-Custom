@@ -1,6 +1,6 @@
 # Build Openwrt via Github Action
 
-All firmware support IPv6 and SFTP.
+All firmware supports IPv6 and SFTP.
 
 ### [Lean Openwrt for N1](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/N1-Lean-Side.yaml) ![[N1]Lean Side](https://github.com/Apocalypsor/Actions-Openwrt-Custom/actions/workflows/N1-Lean-Side.yaml/badge.svg?branch=master)
 
