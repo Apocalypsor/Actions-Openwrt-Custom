@@ -58,7 +58,7 @@ jobs:
         git clone --depth 1 https://github.com/pymumu/smartdns.git openwrt/package/smartdns
         git clone --depth 1 -b lede https://github.com/pymumu/luci-app-smartdns.git openwrt/package/luci-app-smartdns
         git clone --depth 1 https://github.com/rufengsuixing/luci-app-adguardhome.git openwrt/package/luci-app-adguardhome
-        git clone --depth 1 -b master https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
+        git clone --depth 1 -b master --single-branch https://github.com/vernesong/OpenClash.git && mv OpenClash/luci-app-openclash openwrt/package/luci-app-openclash
 
 
     - name: Load custom feeds
