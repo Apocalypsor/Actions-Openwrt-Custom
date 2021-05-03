@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '0 0 */7 * *'
+    - cron: '12 21 */7 * *'
 
 jobs:
   del_runs:
