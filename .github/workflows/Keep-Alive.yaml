@@ -21,3 +21,6 @@ jobs:
         with:
           commit_message: Keep Alive
           skip_dirty_check: false
+          commit_user_name: Action Bot
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: Action <actions@github.com>
